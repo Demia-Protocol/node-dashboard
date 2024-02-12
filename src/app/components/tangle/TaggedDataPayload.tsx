@@ -80,9 +80,45 @@ class TaggedDataPayload extends Component<TaggedDataPayloadProps, TaggedDataPayl
                 <div className="card--value card--value-textarea card--value-textarea__hex card--value-textarea__fit">
                     {this.state.hexIndex}
                 </div>
+                {this.props.payload.signature && (
+                    <React.Fragment>
+                        <div className="card--label row middle">
+                            Signature hex
+                            <BlockButton
+                                onClick={() => ClipboardHelper.copy(
+                                    this.props.payload.signature
+                                )}
+                                buttonType="copy"
+                                labelPosition="right"
+                            />
+                        </div>
+                        { /* eslint-disable-next-line max-len */ }
+                        <div className="card--value card--value-textarea card--value-textarea__hex card--value-textarea__fit">
+                            {this.props.payload.signature}
+                        </div>
+                    </React.Fragment>
+                )}
+                {this.props.payload.publicKey && (
+                    <React.Fragment>
+                        <div className="card--label row middle">
+                            Public Key hex
+                            <BlockButton
+                                onClick={() => ClipboardHelper.copy(
+                                    this.props.payload.publicKey
+                                )}
+                                buttonType="copy"
+                                labelPosition="top"
+                            />
+                        </div>
+                        { /* eslint-disable-next-line max-len */ }
+                        <div className="card--value card--value-textarea card--value-textarea__hex card--value-textarea__fit">
+                            {this.props.payload.publicKey}
+                        </div>
+                    </React.Fragment>
+                )}
                 {!this.state.jsonData && this.state.utf8Data && (
                     <React.Fragment>
-                        <div className="card--label row bottom spread">
+                        <div className="card--label row middle">
                             <span className="margin-r-t">Data UTF8 [{this.state.dataLengthBytes}]</span>
                             <BlockButton
                                 onClick={() => ClipboardHelper.copy(

@@ -1,5 +1,6 @@
-import { IBlock, IBlockMetadata } from "@iota/iota.js";
+import { IBlockMetadata } from "@iota/iota.js";
 import { BlockTangleStatus } from "../../../models/blockTangleStatus";
+import { IBlock } from "../../../models/IBlock";
 
 export interface BlockState {
     /**

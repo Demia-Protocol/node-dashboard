@@ -1,5 +1,6 @@
-import { IMilestonePayload, IBlock, IOutputResponse } from "@iota/iota.js";
+import { IMilestonePayload, IOutputResponse } from "@iota/iota.js";
 import { IAddressDetails } from "../IAddressDetails";
+import { IBlock } from "../IBlock";
 
 export interface ISearchResponse {
     /**

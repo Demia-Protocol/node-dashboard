@@ -1,5 +1,6 @@
 import { Bech32Helper, ClientError, IClient, ITaggedDataPayload, IBlockMetadata, IMilestonePayload, IRoutesResponse, INodeInfo, IOutputResponse, ITransactionPayload, SingleNodeClient, IndexerPluginClient, ALIAS_ADDRESS_TYPE, NFT_ADDRESS_TYPE } from "@iota/iota.js";
 import { ServiceFactory } from "../factories/serviceFactory";
+import { IBlock } from "../models/IBlock";
 import { IAssociatedOutput } from "../models/tangle/IAssociatedOutputsResponse";
 import { ISearchRequest } from "../models/tangle/ISearchRequest";
 import { ISearchResponse } from "../models/tangle/ISearchResponse";
@@ -101,7 +102,7 @@ export class TangleService {
 
                 if (Object.keys(block).length > 0) {
                     return {
-                        block
+                        block: block as IBlock
                     };
                 }
             } catch (err) {
@@ -117,7 +118,7 @@ export class TangleService {
 
                 if (Object.keys(block).length > 0) {
                     return {
-                        block
+                        block: block as IBlock
                     };
                 }
             } catch (err) {

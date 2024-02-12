@@ -1,4 +1,5 @@
-import { IBlock, IMilestonePayload } from "@iota/iota.js";
+import { IMilestonePayload } from "@iota/iota.js";
+import { IBlock } from "../IBlock";
 
 export interface IProofOfInclusion {
     /**
