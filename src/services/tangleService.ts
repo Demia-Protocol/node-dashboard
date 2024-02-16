@@ -64,6 +64,24 @@ export class TangleService {
         const bech32HRP = this._nodeInfo ? this._nodeInfo.protocol.bech32Hrp : Bech32Helper.BECH32_DEFAULT_HRP_MAIN;
         const searchQuery: SearchQuery = new SearchQueryBuilder(request.query, bech32HRP).build();
 
+        if (searchQuery.streamsTagId) {
+            try {
+                const path = `tagged/0x${searchQuery.streamsTagId}`;
+                const blocks: IBlock[] = await client.pluginFetch("core/v2/", "get", path);
+                if (blocks.length > 0 && Object.keys(blocks[0]).length > 0) {
+                    return {
+                        block: blocks[0]
+                    };
+                }
+            } catch (err) {
+                if (err instanceof ClientError && this.checkForUnavailable(err)) {
+                    return {
+                        unavailable: true
+                    };
+                }
+            }
+        }
+
         if (searchQuery.milestoneIndex) {
             try {
                 const milestone = await client.milestoneByIndex(searchQuery.milestoneIndex);

@@ -1,11 +1,11 @@
 import { Blake2b } from "@iota/crypto.js";
-import { serializeBlock } from "@iota/iota.js";
 import { Converter, WriteStream } from "@iota/util.js";
 import React, { ReactNode } from "react";
 import { Link, Redirect, RouteComponentProps } from "react-router-dom";
 import { ReactComponent as ChevronLeftIcon } from "../../assets/chevron-left.svg";
 import { ServiceFactory } from "../../factories/serviceFactory";
 import { TangleService } from "../../services/tangleService";
+import { serializeBlock } from "../../utils/serialiser/customBlockSerialiser";
 import AsyncComponent from "../components/layout/AsyncComponent";
 import Spinner from "../components/layout/Spinner";
 import "./Search.scss";

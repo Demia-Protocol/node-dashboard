@@ -1,3 +1,4 @@
+import { Blake2b } from "@iota/crypto.js";
 import { ALIAS_ADDRESS_TYPE, NFT_ADDRESS_TYPE } from "@iota/iota.js";
 import { Converter, HexHelper } from "@iota/util.js";
 import { IBech32AddressDetails } from "../models/IBech32AddressDetails";
@@ -48,6 +49,11 @@ export interface SearchQuery {
      * The tag of an output.
      */
     tag?: string;
+
+    /**
+     * The streams tag ID
+     */
+    streamsTagId?: string;
 }
 
 /**
@@ -91,8 +97,18 @@ export class SearchQueryBuilder {
         let nftId: string | undefined;
         let milestoneId: string | undefined;
         let foundryId: string | undefined;
+        let streamsTagId: string | undefined;
 
         const milestoneIndex = /^\d+$/.test(this.query) ? Number.parseInt(this.query, 10) : undefined;
+        const streamsMsg = /^([\dA-Fa-f]{80}):([\dA-Fa-f]{24})$/.test(this.query);
+        if (streamsMsg) {
+            const split = this.query.split(":");
+            const blake = new Blake2b(Blake2b.SIZE_256, undefined);
+            blake.update(Converter.hexToBytes(split[0]));
+            blake.update(Converter.hexToBytes(split[1]));
+            streamsTagId = Converter.bytesToHex(blake.final());
+        }
+
         const address = Bech32AddressHelper.buildAddress(this.query, this.networkBechHrp);
 
         // if the hex without prefix has 64 characters it might be an AliasId, NftId or MilestoneId
@@ -147,7 +163,8 @@ export class SearchQueryBuilder {
             aliasId,
             nftId,
             foundryId,
-            tag
+            tag,
+            streamsTagId
         };
     }
 }
