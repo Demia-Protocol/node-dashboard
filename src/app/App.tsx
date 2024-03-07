@@ -2,6 +2,7 @@ import moment from "moment";
 import React, { ReactNode } from "react";
 import { Redirect, Route, RouteComponentProps, Switch, withRouter } from "react-router-dom";
 import { ReactComponent as ExplorerIcon } from "../assets/explorer.svg";
+import { ReactComponent as StreamIcon } from "../assets/stream.svg";
 import { ReactComponent as HomeIcon } from "../assets/home.svg";
 import { ReactComponent as MoonIcon } from "../assets/moon.svg";
 import { ReactComponent as PadlockUnlockedIcon } from "../assets/padlock-unlocked.svg";
@@ -29,6 +30,7 @@ import Header from "./components/layout/Header";
 import HealthIndicator from "./components/layout/HealthIndicator";
 import NavMenu from "./components/layout/NavMenu";
 import NavPanel from "./components/layout/NavPanel";
+import Stream from "./routes/Stream";
 import Explorer from "./routes/Explorer";
 import Address from "./routes/explorer/Address";
 import { AddressProps } from "./routes/explorer/AddressProps";
@@ -50,6 +52,7 @@ import Search from "./routes/Search";
 import { SearchRouteProps } from "./routes/SearchRouteProps";
 import Unavailable from "./routes/Unavailable";
 import Visualizer from "./routes/Visualizer";
+import { StreamService } from "../services/streamService";
 
 /**
  * Main application class.
@@ -74,6 +77,11 @@ class App extends AsyncComponent<RouteComponentProps, AppState> {
      * The metrics service.
      */
     private readonly _metricsService: MetricsService;
+
+    /**
+     * The metrics service.
+     */
+    private readonly _streamService: StreamService;
 
     /**
      * The public node status subscription id.
@@ -129,6 +137,7 @@ class App extends AsyncComponent<RouteComponentProps, AppState> {
         this._themeService = ServiceFactory.get<ThemeService>("theme");
         this._authService = ServiceFactory.get<AuthService>("auth");
         this._metricsService = ServiceFactory.get<MetricsService>("metrics");
+        this._streamService = ServiceFactory.get<StreamService>("stream");
         this._storageService = ServiceFactory.get<LocalStorageService>("local-storage");
 
         this._lastStatus = 0;
@@ -270,6 +279,11 @@ class App extends AsyncComponent<RouteComponentProps, AppState> {
                 hidden: !this.state.isLoggedIn
             },
             {
+                label: "Stream",
+                icon: <StreamIcon />,
+                route: "/stream"
+            },
+            {
                 label: "Explorer",
                 icon: <ExplorerIcon />,
                 route: "/explorer"
@@ -383,6 +397,11 @@ class App extends AsyncComponent<RouteComponentProps, AppState> {
                                             component={() => (<Explorer />)}
                                         />
                                     )}
+                                    <Route
+                                        path="/stream"
+                                        exact={true}
+                                        component={() => (<Stream />)}
+                                    />
                                     <Route
                                         path="/explorer"
                                         exact={true}

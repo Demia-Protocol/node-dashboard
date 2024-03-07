@@ -51,9 +51,9 @@ class SearchInput extends Component<SearchInputProps, SearchInputState> {
                         }
                     }}
                     placeholder={
-                        this.props.compact
+                        this.props.message ? this.props.message : (this.props.compact
                             ? "Search the Tangle"
-                            : "Search blocks, addresses, outputs, milestones, indexes"
+                            : "Search blocks, addresses, outputs, milestones, indexes")
                     }
                 />
             </div>
