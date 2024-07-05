@@ -23,7 +23,7 @@
         "node": ">=14 <=16.16"
     },
     "scripts": {
-        "start": "cross-env PORT=9090 REACT_APP_BRAND_ID=hornet craco start",
+        "start": "cross-env PORT=9090 REACT_APP_BRAND_ID=demia craco start",
         "start-bee": "cross-env PORT=9090 REACT_APP_BRAND_ID=bee craco start",
         "lint": "eslint src --ext .tsx,.ts",
         "sass-lint": "stylelint ./src/**/*.scss --custom-syntax postcss-scss",
