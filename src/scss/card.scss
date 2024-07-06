@@ -6,7 +6,7 @@
 .card {
   padding: 10px;
   border: 1px solid var(--panel-border);
-  border-radius: 16px;
+  clip-path: polygon(0 0, 98% 0, 100% 8%, 100% 100%, 2% 100%, 0 92%);
   background-color: var(--panel-background);
 
   &.card__flat {

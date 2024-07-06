@@ -52,8 +52,8 @@ class SearchInput extends Component<SearchInputProps, SearchInputState> {
                     }}
                     placeholder={
                         this.props.compact
-                            ? "Search the Tangle"
-                            : "Search blocks, addresses, outputs, milestones, indexes"
+                            ? "Search the DON"
+                            : "Search blocks, addresses, outputs, milestones, indexes, tags"
                     }
                 />
             </div>

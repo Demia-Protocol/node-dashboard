@@ -2,14 +2,44 @@
 @import "./fonts/dm-sans";
 @import "./fonts/ibm-plex-mono";
 
-$font-sans: "DM Sans", sans-serif;
-$font-mono: "IBM Plex Mono", monospace;
+// SpaceGrotesk
+@font-face {
+  font-family: SpaceGrotesk;
+  font-weight: 300;
+  src: url("../assets/fonts/SpaceGrotesk-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SpaceGrotesk;
+  font-weight: 400;
+  src: url("../assets/fonts/SpaceGrotesk-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SpaceGrotesk;
+  font-weight: 500;
+  src: url("../assets/fonts/SpaceGrotesk-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SpaceGrotesk;
+  font-weight: 600;
+  src: url("../assets/fonts/SpaceGrotesk-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: SpaceGrotesk;
+  font-weight: 700;
+  src: url("../assets/fonts/SpaceGrotesk-Bold.ttf") format("truetype");
+}
+
+$font-sans: "SpaceGrotesk";
+$font-mono: "SpaceGrotesk", monospace;
 
 $rem-base-font: 16px !default;
 
 @mixin font-size($font-size, $line-height: 0) {
-  font-size: $font-size;
-  font-size: calc($font-size / $rem-base-font * 1rem);
+  font-size: 12px;
 
   @if $line-height > 0 {
     line-height: $line-height;
@@ -18,7 +48,7 @@ $rem-base-font: 16px !default;
 }
 
 .font-weight-bold {
-  font-weight: bold !important;
+  font-weight: 500 !important;
 }
 
 .font-weight-normal {

@@ -444,6 +444,8 @@ class App extends AsyncComponent<RouteComponentProps, AppState> {
                         )}
                     </div>
                 </div>
+                <div className={this.state.theme === "light" ? "gradient1" : "gradient3"} />
+                <div className={this.state.theme === "light" ? "gradient2" : "gradient4"} />
             </div>
         );
     }

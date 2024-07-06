@@ -13,6 +13,68 @@
     overflow: auto;
   }
 
+  .gradient1 {
+    position: fixed;
+    z-index: 2;
+    top: -308px;
+    left: -206px;
+    flex-shrink: 0;
+    width: 902px;
+    height: 874px;
+    border-radius: 902px;
+    background: #ff00a8;
+    pointer-events: none;
+    filter: blur(250px);
+    mix-blend-mode: color;
+  }
+
+  .gradient2 {
+    position: absolute;
+    z-index: 2;
+    right: -368px;
+    bottom: -502px;
+    flex-shrink: 0;
+    width: 932px;
+    height: 1037px;
+    border-radius: 1037px;
+    background: #32ffc2;
+    pointer-events: none;
+    mix-blend-mode: color;
+    filter: blur(250px);
+  }
+
+  .gradient3 {
+    position: fixed;
+    z-index: 2;
+    top: -308px;
+    left: -206px;
+    flex-shrink: 0;
+    width: 902px;
+    height: 874px;
+    border-radius: 902px;
+    opacity: 0.5;
+    background: #32ffc2;
+    pointer-events: none;
+    mix-blend-mode: color;
+    filter: blur(250px);
+  }
+
+  .gradient4 {
+    position: absolute;
+    z-index: 2;
+    right: -368px;
+    bottom: -502px;
+    flex-shrink: 0;
+    width: 932px;
+    height: 1037px;
+    border-radius: 1037px;
+    opacity: 0.5;
+    background: #ff00a8;
+    pointer-events: none;
+    mix-blend-mode: color;
+    filter: blur(250px);
+  }
+
   @include tablet-down {
     .health-indicators {
       padding: $spacing-small 20px;
