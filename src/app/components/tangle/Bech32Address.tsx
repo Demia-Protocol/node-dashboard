@@ -1,14 +1,14 @@
 import { ALIAS_ADDRESS_TYPE, ED25519_ADDRESS_TYPE } from "@iota/iota.js";
 import React, { Component, ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { Bech32AddressProps } from "./Bech32AddressProps";
+import { Bech32AddressState } from "./Bech32AddressState";
 import { ServiceFactory } from "../../../factories/serviceFactory";
 import { NodeConfigService } from "../../../services/nodeConfigService";
 import { Bech32AddressHelper } from "../../../utils/bech32AddressHelper";
 import { ClipboardHelper } from "../../../utils/clipboardHelper";
 import { NameHelper } from "../../../utils/nameHelper";
 import BlockButton from "../layout/BlockButton";
-import { Bech32AddressProps } from "./Bech32AddressProps";
-import { Bech32AddressState } from "./Bech32AddressState";
 
 /**
  * Component which will display an Bech32Address.

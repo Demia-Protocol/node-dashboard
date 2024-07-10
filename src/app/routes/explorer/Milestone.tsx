@@ -1,6 +1,8 @@
 import { blockIdFromMilestonePayload } from "@iota/iota.js";
 import React, { ReactNode } from "react";
 import { Link, RouteComponentProps } from "react-router-dom";
+import { MilestoneProps } from "./MilestoneProps";
+import { MilestoneState } from "./MilestoneState";
 import { ReactComponent as ChevronLeftIcon } from "../../../assets/chevron-left.svg";
 import { ReactComponent as ChevronRightIcon } from "../../../assets/chevron-right.svg";
 import { ServiceFactory } from "../../../factories/serviceFactory";
@@ -10,8 +12,6 @@ import { FormatHelper } from "../../../utils/formatHelper";
 import AsyncComponent from "../../components/layout/AsyncComponent";
 import BlockButton from "../../components/layout/BlockButton";
 import "./Milestone.scss";
-import { MilestoneProps } from "./MilestoneProps";
-import { MilestoneState } from "./MilestoneState";
 
 /**
  * Component which will show the milestone page.

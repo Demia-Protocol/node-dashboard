@@ -1,6 +1,8 @@
 import { ALIAS_ADDRESS_TYPE, Bech32Helper, NFT_ADDRESS_TYPE, TransactionHelper } from "@iota/iota.js";
 import React, { ReactNode } from "react";
 import { Link, RouteComponentProps } from "react-router-dom";
+import { AddressProps } from "./AddressProps";
+import { AddressState } from "./AddressState";
 import { ReactComponent as ChevronLeftIcon } from "../../../assets/chevron-left.svg";
 import { ServiceFactory } from "../../../factories/serviceFactory";
 import { AssociationType, IAssociatedOutput } from "../../../models/tangle/IAssociatedOutputsResponse";
@@ -13,8 +15,6 @@ import Bech32Address from "../../components/tangle/Bech32Address";
 import Output from "../../components/tangle/Output";
 import Outputs from "../../components/tangle/Outputs";
 import "./Address.scss";
-import { AddressProps } from "./AddressProps";
-import { AddressState } from "./AddressState";
 
 /**
  * Component which will show the address page.

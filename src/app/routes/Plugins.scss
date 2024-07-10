@@ -7,6 +7,9 @@
   flex: 1;
   justify-content: center;
   padding: 60px;
+  background-color: var(--background);
+  opacity: 0.7;
+  height: 100%;
 
   @include desktop-down {
     padding: $spacing-small;

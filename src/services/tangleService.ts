@@ -1,4 +1,5 @@
 import { Bech32Helper, ClientError, IClient, ITaggedDataPayload, IBlockMetadata, IMilestonePayload, IRoutesResponse, INodeInfo, IOutputResponse, ITransactionPayload, SingleNodeClient, IndexerPluginClient, ALIAS_ADDRESS_TYPE, NFT_ADDRESS_TYPE } from "@iota/iota.js";
+import { AuthService } from "./authService";
 import { ServiceFactory } from "../factories/serviceFactory";
 import { IBlock } from "../models/IBlock";
 import { IAssociatedOutput } from "../models/tangle/IAssociatedOutputsResponse";
@@ -7,7 +8,6 @@ import { ISearchResponse } from "../models/tangle/ISearchResponse";
 import { Bech32AddressHelper } from "../utils/bech32AddressHelper";
 import { OutputsHelper } from "../utils/outputsHelper";
 import { SearchQuery, SearchQueryBuilder } from "../utils/searchQueryBuilder";
-import { AuthService } from "./authService";
 /**
  * Service to handle api requests.
  */

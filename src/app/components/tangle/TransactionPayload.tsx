@@ -2,12 +2,12 @@
 import { TransactionHelper } from "@iota/iota.js";
 import { Converter } from "@iota/util.js";
 import React, { Component, ReactNode } from "react";
-import { ServiceFactory } from "../../../factories/serviceFactory";
-import { IAssociatedOutput } from "../../../models/tangle/IAssociatedOutputsResponse";
-import { TangleService } from "../../../services/tangleService";
 import Outputs from "./Outputs";
 import { TransactionPayloadProps } from "./TransactionPayloadProps";
 import { TransactionPayloadState } from "./TransactionPayloadState";
+import { ServiceFactory } from "../../../factories/serviceFactory";
+import { IAssociatedOutput } from "../../../models/tangle/IAssociatedOutputsResponse";
+import { TangleService } from "../../../services/tangleService";
 
 /**
  * Component which will display a transaction payload.

@@ -1,10 +1,10 @@
 import classNames from "classnames";
 import React, { Component, ReactNode } from "react";
-import { NameHelper } from "../../../utils/nameHelper";
 import { ReactComponent as DropdownIcon } from "./../../../assets/dropdown-arrow.svg";
 import Bech32Address from "./Bech32Address";
 import { UTXOInputProps } from "./UTXOInputProps";
 import { UTXOInputState } from "./UTXOInputState";
+import { NameHelper } from "../../../utils/nameHelper";
 
 /**
  * Component which will display an UTXO Iput.

@@ -3,14 +3,14 @@ import { RECEIPT_MILESTONE_OPTION_TYPE, PROTOCOL_PARAMETERS_MILESTONE_OPTION_TYP
 import classNames from "classnames";
 import React, { Component, ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { ClipboardHelper } from "../../../utils/clipboardHelper";
-import { FormatHelper } from "../../../utils/formatHelper";
-import BlockButton from "../layout/BlockButton";
 import { ReactComponent as DropdownIcon } from "./../../../assets/dropdown-arrow.svg";
 import { MilestonePayloadProps } from "./MilestonePayloadProps";
 import { MilestonePayloadState } from "./MilestonePayloadState";
 import ProtocolParamsMilestonOption from "./ProtocolParamsMilestonOption";
 import ReceiptMilestoneOption from "./ReceiptMilestoneOption";
+import { ClipboardHelper } from "../../../utils/clipboardHelper";
+import { FormatHelper } from "../../../utils/formatHelper";
+import BlockButton from "../layout/BlockButton";
 
 /**
  * Component which will display a milestone payload.

@@ -1,5 +1,12 @@
 import React, { ReactNode } from "react";
 import { RouteComponentProps, withRouter } from "react-router-dom";
+import AsyncComponent from "./AsyncComponent";
+import Breakpoint from "./Breakpoint";
+import { HeaderProps } from "./HeaderProps";
+import { HeaderState } from "./HeaderState";
+import HealthIndicator from "./HealthIndicator";
+import MicroGraph from "./MicroGraph";
+import SearchInput from "./SearchInput";
 import { ServiceFactory } from "../../../factories/serviceFactory";
 import { IBpsMetrics } from "../../../models/websocket/IBpsMetrics";
 import { IDBSizeMetric } from "../../../models/websocket/IDBSizeMetric";
@@ -10,14 +17,7 @@ import { AuthService } from "../../../services/authService";
 import { EventAggregator } from "../../../services/eventAggregator";
 import { MetricsService } from "../../../services/metricsService";
 import { FormatHelper } from "../../../utils/formatHelper";
-import AsyncComponent from "./AsyncComponent";
-import Breakpoint from "./Breakpoint";
 import "./Header.scss";
-import { HeaderProps } from "./HeaderProps";
-import { HeaderState } from "./HeaderState";
-import HealthIndicator from "./HealthIndicator";
-import MicroGraph from "./MicroGraph";
-import SearchInput from "./SearchInput";
 
 /**
  * Header panel.

@@ -8,6 +8,7 @@
   align-items: stretch;
   min-width: 320px;
   overflow: hidden;
+  background-color: var(--panel-background);
 
   .scroll-content {
     overflow: auto;
@@ -22,6 +23,7 @@
     width: 902px;
     height: 874px;
     border-radius: 902px;
+    opacity: 0.6;
     background: #ff00a8;
     pointer-events: none;
     filter: blur(250px);
@@ -37,6 +39,7 @@
     width: 932px;
     height: 1037px;
     border-radius: 1037px;
+    opacity: 0.6;
     background: #32ffc2;
     pointer-events: none;
     mix-blend-mode: color;
@@ -73,6 +76,12 @@
     pointer-events: none;
     mix-blend-mode: color;
     filter: blur(250px);
+  }
+
+  .empty {
+    height: 100%;
+    opacity: 0.7;
+    background-color: var(--background);
   }
 
   @include tablet-down {

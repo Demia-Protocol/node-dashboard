@@ -1,6 +1,8 @@
 import { IPeer } from "@iota/iota.js";
 import React, { ReactNode } from "react";
 import { Link, RouteComponentProps, withRouter } from "react-router-dom";
+import { PeerRouteProps } from "./PeerRouteProps";
+import { PeerState } from "./PeerState";
 import { ReactComponent as ChevronLeftIcon } from "../../assets/chevron-left.svg";
 import { ReactComponent as ConfirmationIcon } from "../../assets/confirmation.svg";
 import { ReactComponent as EyeClosedIcon } from "../../assets/eye-closed.svg";
@@ -20,8 +22,6 @@ import Graph from "../components/layout/Graph";
 import HealthIndicator from "../components/layout/HealthIndicator";
 import InfoPanel from "../components/layout/InfoPanel";
 import "./Peer.scss";
-import { PeerRouteProps } from "./PeerRouteProps";
-import { PeerState } from "./PeerState";
 
 /**
  * Peer panel.

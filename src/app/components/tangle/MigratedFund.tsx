@@ -1,13 +1,13 @@
 import { ED25519_ADDRESS_TYPE } from "@iota/iota.js";
 import classNames from "classnames";
 import React, { Component, ReactNode } from "react";
-import { ServiceFactory } from "../../../factories/serviceFactory";
-import { NodeConfigService } from "../../../services/nodeConfigService";
-import { FormatHelper } from "../../../utils/formatHelper";
 import { ReactComponent as DropdownIcon } from "./../../../assets/dropdown-arrow.svg";
 import Bech32Address from "./Bech32Address";
 import { MigratedFundProps } from "./MigratedFundProps";
 import { MigratedFundState } from "./MigratedFundState";
+import { ServiceFactory } from "../../../factories/serviceFactory";
+import { NodeConfigService } from "../../../services/nodeConfigService";
+import { FormatHelper } from "../../../utils/formatHelper";
 
 /**
  * Component which will display a Migrated fund.

@@ -514,8 +514,8 @@ module.exports = {
         "import/no-unresolved": [
             "error"
         ],
-        "import/order": [
-            "error",
+        /*"import/order": [
+            "warn",
             {
                 "groups": [
                     [
@@ -534,7 +534,7 @@ module.exports = {
                     "caseInsensitive": true
                 }
             }
-        ],
+        ],*/
         "indent": [
             "off"
         ],
@@ -1213,7 +1213,7 @@ module.exports = {
         "react/jsx-props-no-spreading": [
             "off"
         ],
-        "react/jsx-sort-default-props": [
+        "react/sort-default-props": [
             2
         ],
         "react/jsx-sort-props": [
@@ -1439,7 +1439,7 @@ module.exports = {
             "error"
         ],
         "unicorn/expiring-todo-comments": [
-            "error"
+            "off"
         ],
         "unicorn/explicit-length-check": [
             "error"

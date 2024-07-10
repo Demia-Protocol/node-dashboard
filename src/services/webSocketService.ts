@@ -1,10 +1,10 @@
 /* eslint-disable unicorn/prefer-add-event-listener, unicorn/prefer-node-protocol*/
 import { Converter, RandomHelper } from "@iota/util.js";
 import { Buffer } from "buffer";
+import { AuthService } from "./authService";
 import { ServiceFactory } from "../factories/serviceFactory";
 import { IWebSocketMessage } from "../models/websocket/IWebSocketMessage";
 import { WebSocketTopic } from "../models/websocket/webSocketTopic";
-import { AuthService } from "./authService";
 
 /**
  * Service to handle the websocket connection.
@@ -13,7 +13,7 @@ export class WebSocketService {
     /**
      * Timer to retry failed connections.
      */
-    private _reconnectTimer?: NodeJS.Timer;
+    private _reconnectTimer?: NodeJS.Timeout;
 
     /**
      * The last time we received a message.

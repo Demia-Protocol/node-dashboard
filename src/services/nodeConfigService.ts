@@ -1,7 +1,7 @@
 import { INodeInfoBaseToken } from "@iota/iota.js";
-import { ServiceFactory } from "../factories/serviceFactory";
 import { SessionStorageService } from "./sessionStorageService";
 import { TangleService } from "./tangleService";
+import { ServiceFactory } from "../factories/serviceFactory";
 
 /**
  * Service to handle getting confiuration from the node.

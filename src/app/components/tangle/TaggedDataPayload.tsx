@@ -1,9 +1,9 @@
 import { Converter } from "@iota/util.js";
 import React, { Component, ReactNode } from "react";
-import { ClipboardHelper } from "../../../utils/clipboardHelper";
-import BlockButton from "../layout/BlockButton";
 import { TaggedDataPayloadProps } from "./TaggedDataPayloadProps";
 import { TaggedDataPayloadState } from "./TaggedDataPayloadState";
+import { ClipboardHelper } from "../../../utils/clipboardHelper";
+import BlockButton from "../layout/BlockButton";
 
 /**
  * Component which will display a Tagged data payload.

@@ -2,6 +2,8 @@ import { serializeBlock, CONFLICT_REASON_STRINGS, IBlockMetadata, TAGGED_DATA_PA
 import { WriteStream } from "@iota/util.js";
 import React, { ReactNode } from "react";
 import { Link, RouteComponentProps } from "react-router-dom";
+import { BlockProps } from "./BlockProps";
+import { BlockState } from "./BlockState";
 import { ReactComponent as ChevronDownIcon } from "../../../assets/chevron-down.svg";
 import { ReactComponent as ChevronLeftIcon } from "../../../assets/chevron-left.svg";
 import { ReactComponent as DownloadIcon } from "../../../assets/download.svg";
@@ -20,8 +22,6 @@ import MilestonePayload from "../../components/tangle/MilestonePayload";
 import TaggedDataPayload from "../../components/tangle/TaggedDataPayload";
 import TransactionPayload from "../../components/tangle/TransactionPayload";
 import "./Block.scss";
-import { BlockProps } from "./BlockProps";
-import { BlockState } from "./BlockState";
 
 /**
  * Component which will show the block page.
@@ -40,7 +40,7 @@ class Block extends AsyncComponent<RouteComponentProps<BlockProps>, BlockState> 
     /**
      * Timer to check to state update.
      */
-    private _timerId?: NodeJS.Timer;
+    private _timerId?: NodeJS.Timeout;
 
     /**
      * Create a new instance of Block.

@@ -2,13 +2,13 @@ import { ISSUER_FEATURE_TYPE, METADATA_FEATURE_TYPE, SENDER_FEATURE_TYPE, TAG_FE
 import { Converter } from "@iota/util.js";
 import classNames from "classnames";
 import React, { Component, ReactNode } from "react";
-import { ClipboardHelper } from "../../../utils/clipboardHelper";
-import { NameHelper } from "../../../utils/nameHelper";
-import BlockButton from "../layout/BlockButton";
 import { ReactComponent as DropdownIcon } from "./../../../assets/dropdown-arrow.svg";
 import Bech32Address from "./Bech32Address";
 import { FeatureProps } from "./FeatureProps";
 import { FeatureState } from "./FeatureState";
+import { ClipboardHelper } from "../../../utils/clipboardHelper";
+import { NameHelper } from "../../../utils/nameHelper";
+import BlockButton from "../layout/BlockButton";
 
 /**
  * Component which will display an Feature.

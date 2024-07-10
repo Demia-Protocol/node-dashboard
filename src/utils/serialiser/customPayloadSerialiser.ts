@@ -18,7 +18,6 @@ import {
 } from "@iota/iota.js";
 import type { ReadStream, WriteStream } from "@iota/util.js";
 
-import { DemiaProps, ITransactionPayload } from "../../models/IBlock";
 import {
     deserializeTaggedDataPayload,
     serializeTaggedDataPayload
@@ -27,6 +26,7 @@ import {
     deserializeTransactionPayload,
     serializeTransactionPayload
 } from "./customTransactionPayloadSerialiser";
+import { DemiaProps, ITransactionPayload } from "../../models/IBlock";
 
 export type PayloadTypes = ITransactionPayload
     | IMilestonePayload

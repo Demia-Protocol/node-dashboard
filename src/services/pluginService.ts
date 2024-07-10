@@ -1,4 +1,5 @@
 import { IClient, SingleNodeClient } from "@iota/iota.js";
+import { AuthService } from "./authService";
 import { ServiceFactory } from "../factories/serviceFactory";
 import { IProofOfInclusion } from "../models/plugins/IProofOfInclusion";
 import { ISpammerSettings } from "../models/plugins/ISpammerSettings";
@@ -7,7 +8,6 @@ import { IParticipationEvent } from "../models/plugins/participation/IParticipat
 import { IParticipationEventInfo } from "../models/plugins/participation/IParticipationEventInfo";
 import { IParticipationEvents } from "../models/plugins/participation/IParticipationEvents";
 import { IParticipationEventStatus } from "../models/plugins/participation/IParticipationEventStatus";
-import { AuthService } from "./authService";
 /**
  * Service to handle plugins api requests.
  */

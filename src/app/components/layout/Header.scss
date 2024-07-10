@@ -8,6 +8,7 @@
   height: 80px;
   padding: $spacing-small;
   background-color: var(--background);
+  opacity: 0.7;
 
   @include tablet-down {
     justify-content: flex-start;

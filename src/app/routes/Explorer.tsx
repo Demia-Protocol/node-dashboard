@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import { Link, RouteComponentProps, withRouter } from "react-router-dom";
+import { ExplorerState } from "./ExplorerState";
 import { ReactComponent as ConfirmationIcon } from "../../assets/confirmation.svg";
 import { ReactComponent as MilestoneIcon } from "../../assets/milestone.svg";
 import { ReactComponent as UptimeIcon } from "../../assets/uptime.svg";
@@ -12,7 +13,6 @@ import AsyncComponent from "../components/layout/AsyncComponent";
 import InfoPanel from "../components/layout/InfoPanel";
 import SearchInput from "../components/layout/SearchInput";
 import "./Explorer.scss";
-import { ExplorerState } from "./ExplorerState";
 
 /**
  * Explorer panel.

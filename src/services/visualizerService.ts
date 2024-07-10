@@ -1,3 +1,4 @@
+import { WebSocketService } from "./webSocketService";
 import { ServiceFactory } from "../factories/serviceFactory";
 import { IVisualizerCounts } from "../models/visualizer/IVisualizerCounts";
 import { IVisualizerVertex } from "../models/visualizer/IVisualizerVertex";
@@ -8,7 +9,6 @@ import { ISolidInfo } from "../models/websocket/ISolidInfo";
 import { ITipInfo } from "../models/websocket/ITipInfo";
 import { IVertex } from "../models/websocket/IVertex";
 import { WebSocketTopic } from "../models/websocket/webSocketTopic";
-import { WebSocketService } from "./webSocketService";
 
 /**
  * Visualizer Service.

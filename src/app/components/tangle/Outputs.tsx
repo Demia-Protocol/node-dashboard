@@ -1,10 +1,10 @@
 import { OutputTypes } from "@iota/iota.js";
 import React, { Component, ReactNode } from "react";
-import Pagination from "../layout/Pagination";
-import Spinner from "../layout/Spinner";
 import Output from "./Output";
 import { OutputsProps } from "./OutputsProps";
 import { OutputsState } from "./OutputsState";
+import Pagination from "../layout/Pagination";
+import Spinner from "../layout/Spinner";
 
 /**
  * Component which will display outputs.

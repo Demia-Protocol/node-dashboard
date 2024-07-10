@@ -14,8 +14,8 @@ import {
 } from "@iota/iota.js";
 import type { ReadStream, WriteStream } from "@iota/util.js";
 import bigInt from "big-integer";
-import { IBlock } from "../../models/IBlock";
 import { deserializePayload, serializePayload } from "./customPayloadSerialiser";
+import { IBlock } from "../../models/IBlock";
 
 
 /**

@@ -1,26 +1,6 @@
 import moment from "moment";
 import React, { ReactNode } from "react";
 import { Redirect, Route, RouteComponentProps, Switch, withRouter } from "react-router-dom";
-import { ReactComponent as ExplorerIcon } from "../assets/explorer.svg";
-import { ReactComponent as HomeIcon } from "../assets/home.svg";
-import { ReactComponent as MoonIcon } from "../assets/moon.svg";
-import { ReactComponent as PadlockUnlockedIcon } from "../assets/padlock-unlocked.svg";
-import { ReactComponent as PadlockIcon } from "../assets/padlock.svg";
-import { ReactComponent as PeersIcon } from "../assets/peers.svg";
-import { ReactComponent as PluginsIcon } from "../assets/plugins.svg";
-import { ReactComponent as SunIcon } from "../assets/sun.svg";
-import { ReactComponent as VisualizerIcon } from "../assets/visualizer.svg";
-import { ServiceFactory } from "../factories/serviceFactory";
-import { INodeStatus } from "../models/websocket/INodeStatus";
-import { IPublicNodeStatus } from "../models/websocket/IPublicNodeStatus";
-import { ISyncStatus } from "../models/websocket/ISyncStatus";
-import { WebSocketTopic } from "../models/websocket/webSocketTopic";
-import { AuthService } from "../services/authService";
-import { EventAggregator } from "../services/eventAggregator";
-import { LocalStorageService } from "../services/localStorageService";
-import { MetricsService } from "../services/metricsService";
-import { ThemeService } from "../services/themeService";
-import { BrandHelper } from "../utils/brandHelper";
 import "./App.scss";
 import { AppState } from "./AppState";
 import AsyncComponent from "./components/layout/AsyncComponent";
@@ -50,6 +30,26 @@ import Search from "./routes/Search";
 import { SearchRouteProps } from "./routes/SearchRouteProps";
 import Unavailable from "./routes/Unavailable";
 import Visualizer from "./routes/Visualizer";
+import { ReactComponent as ExplorerIcon } from "../assets/explorer.svg";
+import { ReactComponent as HomeIcon } from "../assets/home.svg";
+import { ReactComponent as MoonIcon } from "../assets/moon.svg";
+import { ReactComponent as PadlockUnlockedIcon } from "../assets/padlock-unlocked.svg";
+import { ReactComponent as PadlockIcon } from "../assets/padlock.svg";
+import { ReactComponent as PeersIcon } from "../assets/peers.svg";
+import { ReactComponent as PluginsIcon } from "../assets/plugins.svg";
+import { ReactComponent as SunIcon } from "../assets/sun.svg";
+import { ReactComponent as VisualizerIcon } from "../assets/visualizer.svg";
+import { ServiceFactory } from "../factories/serviceFactory";
+import { INodeStatus } from "../models/websocket/INodeStatus";
+import { IPublicNodeStatus } from "../models/websocket/IPublicNodeStatus";
+import { ISyncStatus } from "../models/websocket/ISyncStatus";
+import { WebSocketTopic } from "../models/websocket/webSocketTopic";
+import { AuthService } from "../services/authService";
+import { EventAggregator } from "../services/eventAggregator";
+import { LocalStorageService } from "../services/localStorageService";
+import { MetricsService } from "../services/metricsService";
+import { ThemeService } from "../services/themeService";
+import { BrandHelper } from "../utils/brandHelper";
 
 /**
  * Main application class.
@@ -113,12 +113,12 @@ class App extends AsyncComponent<RouteComponentProps, AppState> {
     /**
      * The status timer.
      */
-    private _statusTimer?: NodeJS.Timer;
+    private _statusTimer?: NodeJS.Timeout;
 
     /**
      * The token expiry timer.
      */
-    private _tokenExpiryTimer?: NodeJS.Timer;
+    private _tokenExpiryTimer?: NodeJS.Timeout;
 
     /**
      * Create a new instance of App.
@@ -244,7 +244,7 @@ class App extends AsyncComponent<RouteComponentProps, AppState> {
         }
 
         if (this._statusTimer !== undefined) {
-            clearInterval(this._statusTimer);
+            clearInterval(this._statusTimer.ref());
             this._statusTimer = undefined;
         }
 
@@ -337,7 +337,9 @@ class App extends AsyncComponent<RouteComponentProps, AppState> {
                     </Header>
                     <div className="fill scroll-content">
                         {!this.state.online && (
-                            <p className="padding-l">The node is offline or loading.</p>
+                            <div className="empty">
+                                <p className="padding-l">The node is offline or loading.</p>
+                            </div>
                         )}
                         {this.state.online && (
                             <React.Fragment>

@@ -1,5 +1,8 @@
 import classNames from "classnames";
 import React, { ReactNode } from "react";
+import { IParticipationEventAnswer } from "./../../../models/plugins/participation/IParticipationEventAnswer";
+import { IParticipationEventQuestion } from "./../../../models/plugins/participation/IParticipationEventQuestion";
+import { ParticipationState } from "./ParticipationState";
 import { ServiceFactory } from "../../../factories/serviceFactory";
 import { IParticipationEventInfo } from "../../../models/plugins/participation/IParticipationEventInfo";
 import { PluginService } from "../../../services/pluginService";
@@ -9,9 +12,6 @@ import AsyncComponent from "../../components/layout/AsyncComponent";
 import Dialog from "../../components/layout/Dialog";
 import Spinner from "../../components/layout/Spinner";
 import "./Participation.scss";
-import { IParticipationEventAnswer } from "./../../../models/plugins/participation/IParticipationEventAnswer";
-import { IParticipationEventQuestion } from "./../../../models/plugins/participation/IParticipationEventQuestion";
-import { ParticipationState } from "./ParticipationState";
 
 /**
  * Participation panel.

@@ -1,8 +1,8 @@
 import { Blake2b } from "@iota/crypto.js";
 import { ALIAS_ADDRESS_TYPE, NFT_ADDRESS_TYPE } from "@iota/iota.js";
 import { Converter, HexHelper } from "@iota/util.js";
-import { IBech32AddressDetails } from "../models/IBech32AddressDetails";
 import { Bech32AddressHelper } from "./bech32AddressHelper";
+import { IBech32AddressDetails } from "../models/IBech32AddressDetails";
 
 export interface SearchQuery {
     /**

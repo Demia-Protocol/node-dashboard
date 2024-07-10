@@ -1,9 +1,9 @@
 import classNames from "classnames";
 import React, { Component, ReactNode } from "react";
 import "./ToggleButton.scss";
-import { ReactComponent as ToggleIcon } from "../../../assets/toggle.svg";
 import { ToggleButtonProps } from "./ToggleButtonProps";
 import { ToggleButtonState } from "./ToggleButtonState";
+import { ReactComponent as ToggleIcon } from "../../../assets/toggle.svg";
 
 /**
  * Component which will display a toggle button.

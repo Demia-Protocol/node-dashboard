@@ -1,12 +1,12 @@
 import { ADDRESS_UNLOCK_CONDITION_TYPE, EXPIRATION_UNLOCK_CONDITION_TYPE, STATE_CONTROLLER_ADDRESS_UNLOCK_CONDITION_TYPE, GOVERNOR_ADDRESS_UNLOCK_CONDITION_TYPE, IMMUTABLE_ALIAS_UNLOCK_CONDITION_TYPE, STORAGE_DEPOSIT_RETURN_UNLOCK_CONDITION_TYPE, TIMELOCK_UNLOCK_CONDITION_TYPE } from "@iota/iota.js";
 import classNames from "classnames";
 import React, { Component, ReactNode } from "react";
-import { FormatHelper } from "../../../utils/formatHelper";
-import { NameHelper } from "../../../utils/nameHelper";
 import { ReactComponent as DropdownIcon } from "./../../../assets/dropdown-arrow.svg";
 import Bech32Address from "./Bech32Address";
 import { UnlockConditionProps } from "./UnlockConditionProps";
 import { UnlockCondtionState } from "./UnlockConditionState";
+import { FormatHelper } from "../../../utils/formatHelper";
+import { NameHelper } from "../../../utils/nameHelper";
 
 /**
  * Component which will display an unlock condition.

@@ -8,8 +8,8 @@ import {
     MIN_TRANSACTION_PAYLOAD_LENGTH
 } from "@iota/iota.js";
 import type { ReadStream, WriteStream } from "@iota/util.js";
-import { ITransactionPayload } from "../../models/IBlock";
 import { deserializeTransactionEssence, serializeTransactionEssence } from "./customTransactionEssenceSerialiser";
+import { ITransactionPayload } from "../../models/IBlock";
 
 /**
  * Deserialize the transaction payload from binary.

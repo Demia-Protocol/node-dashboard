@@ -1,7 +1,7 @@
-import { ServiceFactory } from "../factories/serviceFactory";
-import { FetchHelper } from "../utils/fetchHelper";
 import { EventAggregator } from "./eventAggregator";
 import { LocalStorageService } from "./localStorageService";
+import { ServiceFactory } from "../factories/serviceFactory";
+import { FetchHelper } from "../utils/fetchHelper";
 
 /**
  * Service to handle authentication.

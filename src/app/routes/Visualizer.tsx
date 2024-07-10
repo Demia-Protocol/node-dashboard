@@ -4,6 +4,7 @@ import classNames from "classnames";
 import React, { ReactNode } from "react";
 import { RouteComponentProps } from "react-router-dom";
 import Viva from "vivagraphjs";
+import { VisualizerState } from "./VisualizerState";
 import { ReactComponent as CloseIcon } from "../../assets/close.svg";
 import { ReactComponent as PauseIcon } from "../../assets/pause.svg";
 import { ReactComponent as PlayIcon } from "../../assets/play.svg";
@@ -20,7 +21,6 @@ import { VisualizerService } from "../../services/visualizerService";
 import { FormatHelper } from "../../utils/formatHelper";
 import AsyncComponent from "../components/layout/AsyncComponent";
 import "./Visualizer.scss";
-import { VisualizerState } from "./VisualizerState";
 
 /**
  * Visualizer panel.

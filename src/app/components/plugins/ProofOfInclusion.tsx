@@ -2,6 +2,7 @@ import { MILESTONE_PAYLOAD_TYPE, TAGGED_DATA_PAYLOAD_TYPE, TransactionHelper, TR
 import classNames from "classnames";
 import React, { ChangeEvent, ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { ProofOfInclusionState } from "./ProofOfInclusionState";
 import { ReactComponent as UploadIcon } from "../../../assets/upload.svg";
 import { ServiceFactory } from "../../../factories/serviceFactory";
 import { IProofOfInclusion } from "../../../models/plugins/IProofOfInclusion";
@@ -14,7 +15,6 @@ import Spinner from "../layout/Spinner";
 import MilestonePayload from "../tangle/MilestonePayload";
 import TaggedDataPayload from "../tangle/TaggedDataPayload";
 import TransactionPayload from "../tangle/TransactionPayload";
-import { ProofOfInclusionState } from "./ProofOfInclusionState";
 
 /**
  * ProofOfInclusion panel.

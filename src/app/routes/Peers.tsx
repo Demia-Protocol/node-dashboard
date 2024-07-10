@@ -2,6 +2,7 @@ import { IPeer } from "@iota/iota.js";
 import classNames from "classnames";
 import React, { ReactNode } from "react";
 import { Link, RouteComponentProps, withRouter } from "react-router-dom";
+import { PeersState } from "./PeersState";
 import { ReactComponent as ChevronRightIcon } from "../../assets/chevron-right.svg";
 import { ReactComponent as EyeClosedIcon } from "../../assets/eye-closed.svg";
 import { ReactComponent as EyeIcon } from "../../assets/eye.svg";
@@ -20,7 +21,6 @@ import Dialog from "../components/layout/Dialog";
 import Graph from "../components/layout/Graph";
 import Spinner from "../components/layout/Spinner";
 import "./Peers.scss";
-import { PeersState } from "./PeersState";
 
 /**
  * Peers panel.

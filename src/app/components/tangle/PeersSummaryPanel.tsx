@@ -1,6 +1,7 @@
 import { IPeer } from "@iota/iota.js";
 import React, { Component, ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { PeersSummaryState } from "./PeersSummaryState";
 import { ReactComponent as EyeClosedIcon } from "../../../assets/eye-closed.svg";
 import { ReactComponent as EyeIcon } from "../../../assets/eye.svg";
 import { ReactComponent as HealthBadIcon } from "../../../assets/health-bad.svg";
@@ -13,7 +14,6 @@ import { MetricsService } from "../../../services/metricsService";
 import { SettingsService } from "../../../services/settingsService";
 import { DataHelper } from "../../../utils/dataHelper";
 import "./PeersSummaryPanel.scss";
-import { PeersSummaryState } from "./PeersSummaryState";
 
 /**
  * Display a list of the peers.

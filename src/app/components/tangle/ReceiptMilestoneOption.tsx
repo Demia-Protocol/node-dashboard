@@ -1,10 +1,10 @@
 import classNames from "classnames";
 import React, { Component, ReactNode } from "react";
-import { FormatHelper } from "../../../utils/formatHelper";
 import { ReactComponent as DropdownIcon } from "./../../../assets/dropdown-arrow.svg";
 import MigratedFund from "./MigratedFund";
 import { ReceiptMilestoneOptionProps } from "./ReceiptMilestoneOptionProps";
 import { ReceiptMilestoneOptionState } from "./ReceiptMilestoneOptionState";
+import { FormatHelper } from "../../../utils/formatHelper";
 
 /**
  * Component which will display a receipt milestone option.

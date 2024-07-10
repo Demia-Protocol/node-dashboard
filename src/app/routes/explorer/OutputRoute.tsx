@@ -1,14 +1,14 @@
 import { TransactionHelper } from "@iota/iota.js";
 import React, { ReactNode } from "react";
 import { Link, RouteComponentProps } from "react-router-dom";
+import { OutputRouteProps } from "./OutputRouteProps";
+import { OutputRouteState } from "./OutputRouteState";
 import { ReactComponent as ChevronLeftIcon } from "../../../assets/chevron-left.svg";
 import { ServiceFactory } from "../../../factories/serviceFactory";
 import { TangleService } from "../../../services/tangleService";
 import AsyncComponent from "../../components/layout/AsyncComponent";
 import Output from "../../components/tangle/Output";
 import "./Block.scss";
-import { OutputRouteProps } from "./OutputRouteProps";
-import { OutputRouteState } from "./OutputRouteState";
 
 /**
  * Component which will show the Output page.
@@ -22,7 +22,7 @@ class OutputRoute extends AsyncComponent<RouteComponentProps<OutputRouteProps>, 
     /**
      * Timer to check to state update.
      */
-    private _timerId?: NodeJS.Timer;
+    private _timerId?: NodeJS.Timeout;
 
     /**
      * Create a new instance of Output route.

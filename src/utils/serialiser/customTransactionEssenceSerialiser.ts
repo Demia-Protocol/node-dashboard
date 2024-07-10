@@ -15,8 +15,8 @@ import {
 } from "@iota/iota.js";
 import type { ReadStream, WriteStream } from "@iota/util.js";
 import bigInt from "big-integer";
-import { ITransactionEssence } from "../../models/IBlock";
 import { deserializePayload, serializePayload } from "./customPayloadSerialiser";
+import { ITransactionEssence } from "../../models/IBlock";
 
 /**
  * Deserialize the transaction essence from binary.

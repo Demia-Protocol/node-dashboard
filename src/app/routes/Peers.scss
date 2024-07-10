@@ -7,6 +7,9 @@
   flex: 1;
   justify-content: center;
   padding: 60px;
+  background-color: var(--background);
+  opacity: 0.7;
+  height: 100%;
 
   @include desktop-down {
     padding: $spacing-small;
@@ -84,17 +87,17 @@
           }
 
           .peer-id {
-            @include font-size(14px);
-
-            @media (min-width: 1340px) {
-              @include font-size(12px);
-            }
-
             display: flex;
             flex-direction: column;
             color: var(--text-color-primary);
             font-family: $font-sans;
             font-weight: 500;
+
+            @include font-size(14px);
+
+            @media (min-width: 1340px) {
+              @include font-size(12px);
+            }
           }
 
           .graph {

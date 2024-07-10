@@ -2,10 +2,6 @@ import { BASIC_OUTPUT_TYPE, ALIAS_OUTPUT_TYPE, FOUNDRY_OUTPUT_TYPE, NFT_OUTPUT_T
 import classNames from "classnames";
 import React, { Component, ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { ClipboardHelper } from "../../../utils/clipboardHelper";
-import { FormatHelper } from "../../../utils/formatHelper";
-import { NameHelper } from "../../../utils/nameHelper";
-import BlockButton from "../layout/BlockButton";
 import { ReactComponent as DropdownIcon } from "./../../../assets/dropdown-arrow.svg";
 import Bech32Address from "./Bech32Address";
 import Feature from "./Feature";
@@ -13,6 +9,10 @@ import { OutputProps } from "./OutputProps";
 import { OutputState } from "./OutputState";
 import Token from "./Token";
 import UnlockCondition from "./UnlockCondition";
+import { ClipboardHelper } from "../../../utils/clipboardHelper";
+import { FormatHelper } from "../../../utils/formatHelper";
+import { NameHelper } from "../../../utils/nameHelper";
+import BlockButton from "../layout/BlockButton";
 
 /**
  * Component which will display an output.
